@@ -1,0 +1,282 @@
+
+.citizen-layout {
+  min-height: 100vh;
+  display: flex;
+  background: #f4f7fb;
+  color: #17243b;
+  font-family: Arial, sans-serif;
+}
+
+.citizen-sidebar {
+  width: 250px;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  background: #102b52;
+  color: white;
+}
+
+.citizen-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  margin-bottom: 38px;
+}
+
+.citizen-brand-mark {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: white;
+  color: #176b87;
+}
+
+.citizen-menu-heading {
+  padding-left: 12px;
+  color: #a9bed8;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+}
+
+.citizen-menu-item,
+.citizen-sidebar-bottom button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 13px 12px;
+  margin-bottom: 6px;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  color: #e4edf8;
+  text-align: left;
+  cursor: pointer;
+}
+
+.citizen-menu-item.active,
+.citizen-menu-item:hover,
+.citizen-sidebar-bottom button:hover {
+  background: #21466f;
+  color: white;
+}
+
+.citizen-menu-item span {
+  width: 22px;
+  text-align: center;
+}
+
+.citizen-sidebar-bottom {
+  margin-top: auto;
+  padding-top: 30px;
+}
+
+.citizen-main {
+  min-width: 0;
+  flex: 1;
+  padding: 32px;
+}
+
+.citizen-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.citizen-topbar h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+
+.citizen-topbar p {
+  margin: 0;
+  color: #718096;
+}
+
+.citizen-avatar {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #d9edf5;
+  color: #176b87;
+  font-weight: 800;
+}
+
+.citizen-welcome {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 32px;
+  border-radius: 18px;
+  background: linear-gradient(120deg, #e1f2f8, #f1f7fb);
+}
+
+.citizen-welcome-label {
+  color: #176b87;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.citizen-welcome h2 {
+  margin: 14px 0;
+  font-size: clamp(23px, 3vw, 34px);
+}
+
+.citizen-welcome p {
+  max-width: 520px;
+  color: #62748a;
+  line-height: 1.7;
+}
+
+.citizen-primary-button {
+  padding: 13px 18px;
+  margin-top: 10px;
+  border: 0;
+  border-radius: 9px;
+  background: #176b87;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.citizen-welcome-art {
+  font-size: clamp(65px, 10vw, 125px);
+}
+
+.citizen-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.citizen-stat-card {
+  padding: 22px;
+  border: 1px solid #e7edf3;
+  border-radius: 14px;
+  background: white;
+}
+
+.citizen-stat-icon {
+  font-size: 24px;
+}
+
+.citizen-stat-card p {
+  margin: 15px 0 8px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.citizen-stat-card h3 {
+  margin: 0 0 8px;
+  font-size: 30px;
+}
+
+.citizen-stat-card small {
+  color: #7a8799;
+  line-height: 1.5;
+}
+
+.citizen-quick-actions {
+  margin-top: 30px;
+}
+
+.citizen-quick-actions h2 {
+  font-size: 21px;
+}
+
+.citizen-action-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.citizen-action-grid button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 22px;
+  border: 1px solid #e7edf3;
+  border-radius: 14px;
+  background: white;
+  color: #17243b;
+  text-align: left;
+  cursor: pointer;
+}
+
+.citizen-action-grid button:hover {
+  border-color: #85b9cb;
+  transform: translateY(-2px);
+}
+
+.citizen-action-grid button span {
+  font-size: 26px;
+}
+
+.citizen-action-grid button small {
+  color: #718096;
+  line-height: 1.6;
+}
+
+.citizen-footer {
+  margin-top: 36px;
+  color: #7a8799;
+  font-size: 12px;
+}
+
+@media (max-width: 900px) {
+  .citizen-sidebar {
+    width: 200px;
+  }
+
+  .citizen-main {
+    padding: 22px;
+  }
+
+  .citizen-stats,
+  .citizen-action-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .citizen-layout {
+    flex-direction: column;
+  }
+
+  .citizen-sidebar {
+    width: auto;
+  }
+
+  .citizen-brand {
+    margin-bottom: 18px;
+  }
+
+  .citizen-sidebar-bottom {
+    margin-top: 12px;
+    padding-top: 10px;
+  }
+
+  .citizen-main {
+    padding: 18px;
+  }
+
+  .citizen-welcome {
+    padding: 22px;
+  }
+
+  .citizen-welcome-art {
+    display: none;
+  }
+}
